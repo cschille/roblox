@@ -1,4 +1,4 @@
-package test;
+package org.example.listmerge;
 
 import static org.junit.Assert.*;
 
@@ -9,8 +9,6 @@ import java.util.List;
 
 import org.junit.Ignore;
 import org.junit.Test;
-
-import roblox.listmerge.IntegerList;
 
 public class TestListMerge {
 

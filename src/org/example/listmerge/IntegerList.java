@@ -1,4 +1,4 @@
-package roblox.listmerge;
+package org.example.listmerge;
 
 import java.util.List;
 import java.util.ArrayList;
