@@ -1,7 +1,8 @@
-package org.example.listmerge;
+package org.example;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 /**
@@ -22,7 +23,7 @@ public class IntegerList {
 	private List<Integer> listValues = null;
 	
 	/**
-	 * The (static) function satisfying the exact requirements of the exercise.
+	 * The (static) function satisfying the exact requirements of exercise 1.
 	 */
 	public static final List<Integer> mergeLists(List<Integer> list1, List<Integer> list2) {
 		return IntegerList.newBuilder(list1).mergeWith(list2).build().values();
@@ -150,6 +151,10 @@ public class IntegerList {
 			return this;
 		}
 	
+		/**
+		 * If we forget to call build(), equals will be called on the wrong object,
+		 * our test will fail, and we may not know why.  Make that failure explicit. 
+		 */
 		@Override
 		public boolean equals(Object other) {
 			// TODO: pick a more appropriate exception type
@@ -164,12 +169,12 @@ public class IntegerList {
 	 * @return Builder object to which we can chain additional commands.
 	 * @throws IllegalArgumentException
 	 */
-	public static Builder newBuilder(List<Integer> integerList) throws IllegalArgumentException {
+	public static Builder newBuilder(List<Integer> integerList)
+			throws IllegalArgumentException {
 		return new Builder(integerList);
 	}
 		
 	private IntegerList(Builder builder) {
 		this.listValues = builder.listValues;
 	}
-
 }

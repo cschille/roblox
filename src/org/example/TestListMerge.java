@@ -1,4 +1,4 @@
-package org.example.listmerge;
+package org.example;
 
 import static org.junit.Assert.*;
 
@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import org.example.IntegerList;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -26,6 +27,7 @@ public class TestListMerge {
 
 	/**
 	 * Handles negatives and duplicates -- and demonstrates builder syntax.
+	 * [0,2,3] + [-1,1,3,4,5] => [-1,0,1,2,3,3,4,5]
 	 */
 	@Test
 	public void testHandlesNegativesAndDuplicates() {
