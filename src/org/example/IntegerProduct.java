@@ -177,7 +177,7 @@ public class IntegerProduct {
 		}
 	}
 
-	//private IntegerList rawList;
+	// The greatest product calculated for this list
 	private MaxIntegerProductCandidate result;
 
 	/**
@@ -233,7 +233,7 @@ public class IntegerProduct {
 		 * type from the computed Integer lists.
 		 * @param count -- number of best selections desired
 		 * @param type -- which list to select from
-		 * @param lists -- the array of lists
+		 * @param lists -- map of listType => list 
 		 * @return array of best selections, or null if the list isn't long enough
 		 */
 		static List<Integer> bestOf(int count, SortedIntegerListType type, Map<SortedIntegerListType, List<Integer>> lists) {
